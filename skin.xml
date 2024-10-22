@@ -12,7 +12,7 @@
 			<attribute persist="true" config_key="[Master],maximize_library">0</attribute>
 			<attribute persist="true" config_key="[Master],skin_settings">0</attribute>
 			<attribute persist="true" config_key="[Microphone],show_microphone">0</attribute>
-			<attribute persist="true" config_key="[VinylControl],show_vinylcontrol">0</attribute>
+			<attribute persist="true" config_key="[VinylControl],show_vinylcontrol">1</attribute>
 			<attribute persist="true" config_key="[PreviewDeck],show_previewdeck">0</attribute>
 			<attribute persist="true" config_key="[Library],show_coverart">0</attribute>
 		</attributes>
@@ -83,7 +83,10 @@
 								<SingletonContainer trigger="[Tab],overview">
 									<ObjectName>Overview_Singleton</ObjectName>
 								</SingletonContainer>
-								<SingletonContainer trigger="[Tab],library" on_hide_select="0">
+<!--								<SingletonContainer trigger="[Tab],library" on_hide_select="0">-->
+<!--									<ObjectName>Library_Singleton</ObjectName>-->
+<!--								</SingletonContainer>-->
+								<SingletonContainer trigger="[Skin],show_maximized_library" on_hide_select="0">
 									<ObjectName>Library_Singleton</ObjectName>
 								</SingletonContainer>
 								<SingletonContainer trigger="[Tab],samplers" on_hide_select="0">

@@ -81,6 +81,22 @@
 
                 </Children>
               </WidgetGroup>
+              <WidgetGroup>
+                <ObjectName>WaveformInfo_VinylControls</ObjectName>
+                <Layout>horizontal</Layout>
+                <Size>0me,30f</Size>
+                <Children>
+
+                  <Template src="skin:templates/toggle_button.xml">
+                    <SetVariable name="TooltipId">vinylControl</SetVariable>
+                    <SetVariable name="ObjectName">WaveformInfo_VinylControlButton</SetVariable>
+                    <SetVariable name="Size">30me,30f</SetVariable>
+                    <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],vinylcontrol_enabled</SetVariable>
+                  </Template>
+
+
+                </Children>
+              </WidgetGroup>
             </Children>
           </WidgetGroup>
         </Children>

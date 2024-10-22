@@ -13,7 +13,7 @@
             <SetVariable name="tab_name">Overview</SetVariable>
             <SetVariable name="config_key">overview</SetVariable>
           </Template>
-          <Template src="skin:tab.xml">
+          <Template src="skin:tab_library.xml">
             <SetVariable name="tab_name">Browse</SetVariable>
             <SetVariable name="config_key">library</SetVariable>
           </Template>

@@ -83,7 +83,7 @@ WPushButton[value="1"]:hover {
 }
 
 #DeckBPM {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #DeckBPMTitleWrapper {
@@ -386,6 +386,11 @@ WLabel {
 
 #WaveformInfo_KeylockButton {
   image: url(skin:icons/keylock.svg) no-repeat center center;
+}
+
+#WaveformInfo_VinylControlButton {
+  image: url(skin:icons/vinyl.svg) no-repeat center center;
+  padding:3px;
 }
 
 #WaveformInfo_QuantizeButton {
