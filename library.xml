@@ -8,6 +8,7 @@
         <Layout>vertical</Layout>
         <Size>0me,0me</Size>
         <Children>
+          <Template src="skin:templates/preview_deck.xml"/>
           <WidgetGroup>
             <ObjectName>SidebarContainer</ObjectName>
             <Layout>horizontal</Layout>
