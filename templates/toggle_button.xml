@@ -20,14 +20,10 @@ Originally taken from the Deere theme included with Mixxx, modified slightly.
     <State>
       <Number>0</Number>
       <Text><Variable name="State0Text"/></Text>
-      <Pressed scalemode="STRETCH_ASPECT"><Variable name="State0Pressed"/></Pressed>
-      <Unpressed scalemode="STRETCH_ASPECT"><Variable name="State0Unpressed"/></Unpressed>
     </State>
     <State>
       <Number>1</Number>
       <Text><Variable name="State1Text"/></Text>
-      <Pressed scalemode="STRETCH_ASPECT"><Variable name="State1Pressed"/></Pressed>
-      <Unpressed scalemode="STRETCH_ASPECT"><Variable name="State1Unpressed"/></Unpressed>
     </State>
     <Connection>
       <ConfigKey><Variable name="LeftConnectionControl"/></ConfigKey>

@@ -9,6 +9,12 @@ Title bg: #112f5c
 Blue: #2d85cd
 White: #e5e6ea
 
+Button pressed: #2785f3
+Button unpressed: #182029
+
+Highlight text green: #71c982
+Highlight text orange: #fc8344
+Highlight text red: #b6504b
 */
 
 /* DEBUG
@@ -34,40 +40,13 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
     background-color: rgba(255,255,255,0.2);
 }
 
-/************************************************************************/
-/*     Buttons                                                          */
-/************************************************************************/
-
-WPushButton {
-  color: #e5e6ea;
-  background-color: transparent;
-  border: 1px solid #32323c;
-  border-radius: 2px;
-  outline: none;
-}
-
-WPushButton:hover {
-  border: 1px solid #5F5F5F;
-}
-
-WPushButton[value="1"] {
-  color: #e5e6ea;
-  border: 1px solid #5F5F5F;
-  background-color: #32323c;
-}
-
-WPushButton[value="1"]:hover {
-  border: 1px solid #4B4B4B;
-  background-color: #30303a;
-}
 
 /************************************************************************/
 /*     Deck                                                             */
 /************************************************************************/
 
 #Deck {
-  border: 1px solid transparent;
-  border-radius: 2px;
+  border: 2px solid #182029;
 }
 
 #Deck[highlight="1"] {
@@ -76,9 +55,8 @@ WPushButton[value="1"]:hover {
 
 #DeckBPMWrapper {
   border: 2px solid #e5e6ea;
-  border-radius: 5px;
-  margin-bottom: 4px;
-  padding-right: 2px;
+  padding-top: 5px;
+  border-radius: 2px;
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
 
@@ -112,7 +90,7 @@ WPushButton[value="1"]:hover {
 }
 
 #DeckHeader {
-  background-color: #112f5c;
+  background-color: #182029;
   padding: 2px;
 }
 
@@ -121,14 +99,15 @@ WPushButton[value="1"]:hover {
 }
 
 #DeckTitle, #DeckTitleNote {
-  font-size: 20px;
+  font-size: 24px;
+  margin-left: 10px;
 }
 
 #DeckTitleNote {
   margin: 0 2px;
 }
 
-#DeckChannelTitle, #DeckTrackTimeTitle, #DeckTempoTitle {
+#DeckTrackTimeTitle, #DeckTempoTitle {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -177,6 +156,51 @@ WPushButton[value="1"]:hover {
 #TrackNumber {
   font-size: 20px;
   font-weight: bold;
+}
+
+#DeckControlsContainer WPushButton {
+  border-radius:2px;
+  margin: 5px;
+  background-color: transparent;
+  border: 1px solid #cbcecb;
+  color: #cbcecb;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#DeckControlsContainer {
+  margin: 0;
+}
+
+#DeckChannelTitle {
+  font-size: 28px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+#DeckPlayingLeft, #DeckPlayingRight {
+  font-size: 24px;
+}
+
+#QuantizeButton[value="1"] {
+  border: 1px solid #b6504b;
+  color: #b6504b;
+}
+
+#KeylockButton[value="1"] {
+  border: 1px solid #fc8344;
+  color: #fc8344;
+}
+
+#VinylControlButton[value="1"] {
+  border: 1px solid #71c982;
+  color: #71c982;
+}
+
+#DeckTrackTimeTitle, #DeckTrackTimeWrapper {
+  margin-left: 10px;
 }
 
 /************************************************************************/
@@ -242,7 +266,7 @@ WEffectSelector {
 /************************************************************************/
 
 #LibraryWrapper QScrollBar {
-  background-color: #112f5c;
+  background-color: #726d73;
 }
 
 #LibraryWrapper QScrollBar::handle:horizontal {
@@ -255,10 +279,11 @@ WEffectSelector {
 }
 
 #LibraryWrapper QScrollBar:vertical {
-  width: 24px;
+  width: 30px;
+  border-left: 1px solid #182029;
 }
 #LibraryWrapper QScrollBar::handle:vertical {
-  border: 2px solid lightgray;
+  border: 0;
 }
 
 #LibraryWrapper QScrollBar::add-page,
@@ -283,8 +308,8 @@ WEffectSelector {
 #LibraryWrapper QTableView,
 #LibraryWrapper WLibraryTextBrowser {
   background-color: black;
-  alternate-background-color: #32323c;
-  selection-background-color: #112f5c;
+  alternate-background-color: #494548;
+  selection-background-color: #2785f3;
   color: white;
   selection-color: white;
   font-size: 18px;
@@ -298,7 +323,7 @@ WLibraryTextBrowser {
 #LibraryWrapper WLibrarySidebar {
   background-color: black;
   alternate-background-color: #32323c;
-  selection-background-color: #112f5c;
+  selection-background-color: #2785f3;
   color: #e5e6ea;
   font-weight: bold;
   font-size: 20px;
@@ -309,12 +334,13 @@ WLibraryTextBrowser {
 /* triangle for closed/opened branches in treeview */
 WLibrarySidebar::branch:has-children:!has-siblings:closed,
 WLibrarySidebar::branch:closed:has-children:has-siblings {
-  border-image: none; image: url(skin:icons/ic_chevron_right_48px.svg);
+  border-image: none; image: url(skin:icons/style_branch_closed.svg);
 }
 
 WLibrarySidebar::branch:open:has-children:!has-siblings,
 WLibrarySidebar::branch:open:has-children:has-siblings {
-  border-image: none; image: url(skin:/icons/ic_chevron_down_48px.svg);
+  border-image: none; image: url(skin:/icons/style_branch_open.svg);
+  border:48px;
 }
 
 #LibraryWrapper QPushButton,
@@ -336,16 +362,15 @@ WLabel {
   font-size: 20px;
   font-weight: bold;
   padding: 4px;
+  padding-right: 10px;
   text-transform: uppercase;
 }
 
 /* Sidebar (hide/show) */
 #SidebarContainer {
-  background-color: #112f5c;
+  background-color: #2785f3;
 }
 #SidebarButton {
-  background-color: rgba(0,0,0,0.2);
-  border: 2px solid lightgray;
   border-radius: 4px;
   color: lightgray;
   font-size: 16px;
@@ -377,7 +402,8 @@ WTrackTableView {
 
 #WaveformInfo_Header {
   background-color: #32323c;
-  border-top-right-radius: 10px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding-right: 2px;
 }
 
@@ -393,11 +419,6 @@ WTrackTableView {
   text-transform: uppercase;
 }
 
-#WaveformInfo_Data_Container,
-#WaveformInfo_Key_Container,
-#WaveformInfo_Bars_Container {
-  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
-}
 
 #WaveformInfo_Key_Icon {
   background-color: #e5e6ea;
@@ -407,18 +428,6 @@ WTrackTableView {
   padding: -6px -6px -3px -2px;
 }
 
-#WaveformInfo_KeylockButton {
-  image: url(skin:icons/keylock.svg) no-repeat center center;
-}
-
-#WaveformInfo_VinylControlButton {
-  image: url(skin:icons/vinyl.svg) no-repeat center center;
-  padding:3px;
-}
-
-#WaveformInfo_QuantizeButton {
-  image: url(skin:icons/quantize.svg) no-repeat center center;
-}
 
 /************************************************************************/
 /*     Tabs                                                             */
@@ -433,13 +442,13 @@ WTrackTableView {
 }
 
 #TabControls WPushButton[value="0"] {
-  border: 2px solid gray;
-  color: gray;
+  border: 2px solid #182029;
+  color: #182029;
 }
 
 #TabControls WPushButton[value="1"] {
-  border: 2px solid #c3d541;
-  color: #c3d541;
+  border: 2px solid #2785f3;
+  color: #2785f3;
 }
 
 /************************************************************************/
