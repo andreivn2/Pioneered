@@ -242,7 +242,7 @@ WEffectSelector {
 /************************************************************************/
 
 #LibraryWrapper QScrollBar {
-  background-color: gray;
+  background-color: #112f5c;
 }
 
 #LibraryWrapper QScrollBar::handle:horizontal {
@@ -255,8 +255,10 @@ WEffectSelector {
 }
 
 #LibraryWrapper QScrollBar:vertical {
-  border: 0;
-  width: 8px;
+  width: 24px;
+}
+#LibraryWrapper QScrollBar::handle:vertical {
+  border: 2px solid lightgray;
 }
 
 #LibraryWrapper QScrollBar::add-page,
@@ -282,19 +284,37 @@ WEffectSelector {
 #LibraryWrapper WLibraryTextBrowser {
   background-color: black;
   alternate-background-color: #32323c;
-  selection-background-color: #e5e6ea;
+  selection-background-color: #112f5c;
   color: white;
-  selection-color: black;
+  selection-color: white;
+  font-size: 18px;
 }
 
+WLibraryTextBrowser {
+  padding: 2px;
+}
+
+
 #LibraryWrapper WLibrarySidebar {
-  background-color: #32323c;
-  selection-background-color: #e5e6ea;
-  border-left: 4px solid gray;
+  background-color: black;
+  alternate-background-color: #32323c;
+  selection-background-color: #112f5c;
   color: #e5e6ea;
   font-weight: bold;
-  selection-color: black;
-  text-transform: uppercase;
+  font-size: 20px;
+  selection-color: white;
+  width: 100%;
+}
+
+/* triangle for closed/opened branches in treeview */
+WLibrarySidebar::branch:has-children:!has-siblings:closed,
+WLibrarySidebar::branch:closed:has-children:has-siblings {
+  border-image: none; image: url(skin:icons/ic_chevron_right_48px.svg);
+}
+
+WLibrarySidebar::branch:open:has-children:!has-siblings,
+WLibrarySidebar::branch:open:has-children:has-siblings {
+  border-image: none; image: url(skin:/icons/ic_chevron_down_48px.svg);
 }
 
 #LibraryWrapper QPushButton,
@@ -342,6 +362,9 @@ WLabel {
 }
 #LibraryWrapper WTrackTableView::indicator:checked {
   image: url(skin:icons/library_checkbox_checked.svg);
+}
+WTrackTableView {
+  qproperty-playedInactiveColor: #22c92c;
 }
 
 /************************************************************************/

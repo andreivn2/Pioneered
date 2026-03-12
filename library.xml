@@ -20,15 +20,15 @@
               </SearchBox>
               <PushButton>
                 <ObjectName>SidebarButton</ObjectName>
-                <Size>80p,40p</Size>
+                <Size>200p,40p</Size>
                 <NumberStates>2</NumberStates>
                 <State>
                   <Number>0</Number>
-                  <Text>Show &#8612;</Text>
+                  <Text>Library</Text>
                 </State>
                 <State>
                   <Number>1</Number>
-                  <Text>Hide &#8614;</Text>
+                  <Text>Hide</Text>
                 </State>
                 <Connection>
                   <ConfigKey>[Sidebar],sidebar_visible</ConfigKey>
