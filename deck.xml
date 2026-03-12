@@ -92,12 +92,12 @@
                       </WidgetGroup>
 
                       <Template src="skin:templates/toggle_button.xml">
-                        <SetVariable name="TooltipId">keylock</SetVariable>
-                        <SetVariable name="ObjectName">KeylockButton</SetVariable>
+                        <SetVariable name="TooltipId">vinylControl</SetVariable>
+                        <SetVariable name="ObjectName">VinylControlButton</SetVariable>
                         <SetVariable name="Size">110f,50f</SetVariable>
-                        <SetVariable name="State0Text">KEYLOCK</SetVariable>
-                        <SetVariable name="State1Text">KEYLOCK</SetVariable>
-                        <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],keylock</SetVariable>
+                        <SetVariable name="State0Text">DVS</SetVariable>
+                        <SetVariable name="State1Text">DVS</SetVariable>
+                        <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],vinylcontrol_enabled</SetVariable>
                       </Template>
                     </Children>
                   </WidgetGroup>
@@ -108,12 +108,12 @@
                     <Children>
 
                       <Template src="skin:templates/toggle_button.xml">
-                        <SetVariable name="TooltipId">vinylControl</SetVariable>
-                        <SetVariable name="ObjectName">VinylControlButton</SetVariable>
+                        <SetVariable name="TooltipId">keylock</SetVariable>
+                        <SetVariable name="ObjectName">KeylockButton</SetVariable>
                         <SetVariable name="Size">110f,50f</SetVariable>
-                        <SetVariable name="State0Text">DVS</SetVariable>
-                        <SetVariable name="State1Text">DVS</SetVariable>
-                        <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],vinylcontrol_enabled</SetVariable>
+                        <SetVariable name="State0Text">KEYLOCK</SetVariable>
+                        <SetVariable name="State1Text">KEYLOCK</SetVariable>
+                        <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],keylock</SetVariable>
                       </Template>
 
                       <Template src="skin:templates/toggle_button.xml">
