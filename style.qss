@@ -53,9 +53,8 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   border: 1px solid #e5e6ea;
 }
 
-#DeckBPMWrapper {
+#DeckBPM {
   border: 2px solid #e5e6ea;
-  padding-top: 5px;
   border-radius: 2px;
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
 }
@@ -111,6 +110,7 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #cbcecb;
 }
 
 #DeckPlayingLeft, #DeckPlayingRight {
@@ -123,7 +123,15 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
 }
 
+#WaveformInfo_Key {
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
+  color: #cbcecb;
+  margin: 2px;
+}
+
+
 #DeckTrackTime {
+  color: #cbcecb;
   font-size: 36px;
 }
 
@@ -160,7 +168,7 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
 
 #DeckControlsContainer WPushButton {
   border-radius:2px;
-  margin: 5px;
+  margin: 2px;
   background-color: transparent;
   border: 1px solid #cbcecb;
   color: #cbcecb;
@@ -199,7 +207,7 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   color: #71c982;
 }
 
-#DeckTrackTimeTitle, #DeckTrackTimeWrapper {
+#DeckTrackTimeWrapper {
   margin-left: 10px;
 }
 
