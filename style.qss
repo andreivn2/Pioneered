@@ -54,9 +54,21 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
 }
 
 #DeckBPM {
-  border: 2px solid #e5e6ea;
-  border-radius: 2px;
+  border: 2px solid #fc8344;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  color:#fc8344;
   qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+}
+#TrackBPMTextContainer {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignBottom';
+  background-color: #fc8344;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#TrackBPMContainer {
+  margin-right: 5px;
 }
 
 #DeckBPM {
@@ -71,11 +83,6 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
 #DeckBPMTitle {
   font-size: 8px;
   font-weight: bold;
-}
-
-#TrackBPMRangeContainer {
-  padding: 5px;
-  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
 }
 
 #DeckBPMRangePercent {
@@ -170,11 +177,9 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   border-radius:2px;
   margin: 2px;
   background-color: transparent;
-  border: 1px solid #cbcecb;
   color: #cbcecb;
   font-size: 12px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 #DeckControlsContainer {
@@ -185,6 +190,7 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   font-size: 28px;
   margin-right: 5px;
   margin-left: 5px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 

@@ -184,11 +184,16 @@
             <Layout>vertical</Layout>
             <Size>75max,0me</Size>
             <Children>
-              <Label>
-                <ObjectName>DeckTrackTimeTitle</ObjectName>
-                <Text>BPM</Text>
-                <Size>20me,25f</Size>
-              </Label>
+              <WidgetGroup>
+                <ObjectName>TrackBPMTextContainer</ObjectName>
+                <Layout>vertical</Layout>
+                <Children>
+                  <Label>
+                    <ObjectName>DeckTrackTimeTitle</ObjectName>
+                    <Text>BPM</Text>
+                  </Label>
+                </Children>
+              </WidgetGroup>
               <NumberBpm>
                 <ObjectName>DeckBPM</ObjectName>
                 <TooltipId>visual_bpm</TooltipId>
